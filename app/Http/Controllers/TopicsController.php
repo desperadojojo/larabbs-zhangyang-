@@ -29,7 +29,8 @@ class TopicsController extends Controller
 
 	public function show(Request $request, Topic $topic)
 	{
-		// URL 矫正
+		// URL 矫正 
+		//301 强制跳转，为了防止用户改浏览器地址最后面翻译出来的 slug
 		if ( ! empty($topic->slug) && $topic->slug != $request->slug) {
 			return redirect($topic->link(), 301);
 		}

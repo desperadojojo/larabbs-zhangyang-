@@ -29,7 +29,7 @@ class TopicObserver
         if ( ! $topic->slug) {
 
             // 推送任务到队列
-            dispatch(new TranslateSlug($topic));
+            dispatch(new TranslateSlug($topic));//实例化任务类，推送到队列任务中。此时这个对象会在后台默默尝试执行几次，成功会更新数据表 topics，几次失败之后会把失败信息写进 failed_jobs 数据表，然后释放自己。
         }
     }
 }
