@@ -16,7 +16,7 @@ class ReplyObserver
         $topic->increment('reply_count',1);
 
         //通知作者话题被回复了
-        $topic->user->notify(new TopicReplied($reply));
+        $topic->user->notify(new TopicReplied($reply));//实例化 TopicReplied 通知类
     }
 
     public function creating(Reply $reply)
