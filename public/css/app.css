@@ -8500,6 +8500,23 @@ body {
   border-top: 1px solid #dcebf5;
 }
 
+/* Sidebar */
+
+.sidebar .panel-body {
+  padding: 12px;
+}
+
+.sidebar hr {
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+
+.sidebar .active-users a.media {
+  color: #797878;
+  line-height: 26px;
+  font-size: 0.9em;
+}
+
 /* Topic Show Page */
 
 simditor-body,

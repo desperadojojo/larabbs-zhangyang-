@@ -10,6 +10,8 @@ use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
+    use Traits\ActiveUserHelper;
+    
     use HasRoles;
     
     use Notifiable{
@@ -17,6 +19,8 @@ class User extends Authenticatable
     }
     // 其实 Notifiable 这个 trait 自带 notify 方法发送消息通知，但是我们这里需要改写它，但同时又需要使用自带的这个 notify 方法，
     // 为了避免歧义，我们引用时用 `notify as protected laravelNotify` => 相当于把 Notifiable 这个 trait 中的 notify 方法改名为 laravelNotify 
+
+    
 
     public function notify($instance)
     {
