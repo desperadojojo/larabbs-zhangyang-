@@ -41,6 +41,7 @@ return array(
     'App\\Models\\Traits\\ActiveUserHelper' => $baseDir . '/app/Models/Traits/ActiveUserHelper.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
     'App\\Notifications\\TopicReplied' => $baseDir . '/app/Notifications/TopicReplied.php',
+    'App\\Observers\\LinkObserver' => $baseDir . '/app/Observers/LinkObserver.php',
     'App\\Observers\\ReplyObserver' => $baseDir . '/app/Observers/ReplyObserver.php',
     'App\\Observers\\TopicObserver' => $baseDir . '/app/Observers/TopicObserver.php',
     'App\\Observers\\UserObserver' => $baseDir . '/app/Observers/UserObserver.php',
