@@ -51,6 +51,7 @@ return array(
     'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
     'Mews\\Purifier\\' => array($vendorDir . '/mews/purifier/src'),
     'Mews\\Captcha\\' => array($vendorDir . '/mews/captcha/src'),
+    'Liyu\\Dingo\\' => array($vendorDir . '/liyu/dingo-serializer-switch/src'),
     'League\\OAuth1\\' => array($vendorDir . '/league/oauth1-client/src'),
     'League\\Fractal\\' => array($vendorDir . '/league/fractal/src'),
     'League\\Flysystem\\' => array($vendorDir . '/league/flysystem/src'),

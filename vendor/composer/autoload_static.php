@@ -16,15 +16,15 @@ class ComposerStaticInit35ce4ac49c9163e4b23fa867818013ec
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
+        'bd9634f2d41831496de0d3dfe4c94881' => __DIR__ . '/..' . '/symfony/polyfill-php56/bootstrap.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
-        'bd9634f2d41831496de0d3dfe4c94881' => __DIR__ . '/..' . '/symfony/polyfill-php56/bootstrap.php',
         '34122c0574b76bf21c9a8db62b5b9cf3' => __DIR__ . '/..' . '/cakephp/chronos/src/carbon_compat.php',
+        'f4e9c7747917193061b46ee142399603' => __DIR__ . '/..' . '/dingo/api/src/helpers.php',
         '2cffec82183ee1cea088009cef9a6fc3' => __DIR__ . '/..' . '/ezyang/htmlpurifier/library/HTMLPurifier.composer.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         '4a1f389d6ce373bda9e57857d3b61c84' => __DIR__ . '/..' . '/barryvdh/laravel-debugbar/src/helpers.php',
-        'f4e9c7747917193061b46ee142399603' => __DIR__ . '/..' . '/dingo/api/src/helpers.php',
         'c9b7496aa2e287ba00ff44d2d2a861b1' => __DIR__ . '/..' . '/hieu-le/active/src/helpers.php',
         '5e8fe2a5ffaded85af682684fe3bbf5a' => __DIR__ . '/..' . '/mews/captcha/src/helpers.php',
         'cb61d74ad51d00867155534456b38b23' => __DIR__ . '/..' . '/mews/purifier/src/helpers.php',
@@ -113,6 +113,7 @@ class ComposerStaticInit35ce4ac49c9163e4b23fa867818013ec
         ),
         'L' => 
         array (
+            'Liyu\\Dingo\\' => 11,
             'League\\OAuth1\\' => 14,
             'League\\Fractal\\' => 15,
             'League\\Flysystem\\' => 17,
@@ -364,6 +365,10 @@ class ComposerStaticInit35ce4ac49c9163e4b23fa867818013ec
         array (
             0 => __DIR__ . '/..' . '/mews/captcha/src',
         ),
+        'Liyu\\Dingo\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/liyu/dingo-serializer-switch/src',
+        ),
         'League\\OAuth1\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/oauth1-client/src',
@@ -554,6 +559,7 @@ class ComposerStaticInit35ce4ac49c9163e4b23fa867818013ec
 
     public static $classMap = array (
         'App\\Console\\Commands\\CalculateActiveUser' => __DIR__ . '/../..' . '/app/Console/Commands/CalculateActiveUser.php',
+        'App\\Console\\Commands\\GenerateToken' => __DIR__ . '/../..' . '/app/Console/Commands/GenerateToken.php',
         'App\\Console\\Commands\\SyncUserActivedAt' => __DIR__ . '/../..' . '/app/Console/Commands/SyncUserActivedAt.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
@@ -582,6 +588,7 @@ class ComposerStaticInit35ce4ac49c9163e4b23fa867818013ec
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Http\\Requests\\Api\\AuthorizationRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Api/AuthorizationRequest.php',
         'App\\Http\\Requests\\Api\\CaptchaRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Api/CaptchaRequest.php',
         'App\\Http\\Requests\\Api\\SocialAuthorizationRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Api/SocialAuthorizationRequest.php',
         'App\\Http\\Requests\\Api\\UserRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Api/UserRequest.php',
@@ -615,6 +622,7 @@ class ComposerStaticInit35ce4ac49c9163e4b23fa867818013ec
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\Repositories\\AuthorizationsRepository' => __DIR__ . '/../..' . '/app/Repositories/AuthorizationsRepository.php',
+        'App\\Transformers\\UserTransformer' => __DIR__ . '/../..' . '/app/Transformers/UserTransformer.php',
         'ArithmeticError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
         'AssertionError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
         'Barryvdh\\Debugbar\\Console\\ClearCommand' => __DIR__ . '/..' . '/barryvdh/laravel-debugbar/src/Console/ClearCommand.php',
@@ -3279,6 +3287,10 @@ class ComposerStaticInit35ce4ac49c9163e4b23fa867818013ec
         'League\\OAuth1\\Client\\Signature\\Signature' => __DIR__ . '/..' . '/league/oauth1-client/src/Client/Signature/Signature.php',
         'League\\OAuth1\\Client\\Signature\\SignatureInterface' => __DIR__ . '/..' . '/league/oauth1-client/src/Client/Signature/SignatureInterface.php',
         'LinksTableSeeder' => __DIR__ . '/../..' . '/database/seeds/LinksTableSeeder.php',
+        'Liyu\\Dingo\\SerializerSwitch' => __DIR__ . '/..' . '/liyu/dingo-serializer-switch/src/SerializerSwitch.php',
+        'Liyu\\Dingo\\Serializers\\ArraySerializer' => __DIR__ . '/..' . '/liyu/dingo-serializer-switch/src/Serializers/ArraySerializer.php',
+        'Liyu\\Dingo\\Serializers\\DataArraySerializer' => __DIR__ . '/..' . '/liyu/dingo-serializer-switch/src/Serializers/DataArraySerializer.php',
+        'Liyu\\Dingo\\ServiceProvider' => __DIR__ . '/..' . '/liyu/dingo-serializer-switch/src/ServiceProvider.php',
         'Mews\\Captcha\\Captcha' => __DIR__ . '/..' . '/mews/captcha/src/Captcha.php',
         'Mews\\Captcha\\CaptchaController' => __DIR__ . '/..' . '/mews/captcha/src/CaptchaController.php',
         'Mews\\Captcha\\CaptchaServiceProvider' => __DIR__ . '/..' . '/mews/captcha/src/CaptchaServiceProvider.php',
