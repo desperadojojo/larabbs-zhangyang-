@@ -43,15 +43,19 @@ $api->version('v1', [
             // 图片资源
             $api->post('images','ImagesController@store')
                 ->name('api.images.store');
-            //发布话题
+            //发布、修改、删除话题
             $api->post('topics','TopicsController@store')
                 ->name('api.topics.store');
             $api->patch('topics/{topic}', 'TopicsController@update')
                 ->name('api.topics.update');
             $api->delete('topics/{topic}', 'TopicsController@destroy')
                 ->name('api.topics.destroy');
+            // 发布回复            
             $api->post('topics/{topic}/replies','RepliesController@store')
                 ->name('api.topics.replies.stroe');
+            // 删除回复
+            $api->delete('topics/{topic}/replies/{reply}', 'RepliesController@destroy')
+                ->name('api.topics.replies.destroy');
             // 编辑登录用户信息
             $api->patch('user', 'UsersController@update')
                 ->name('api.user.update');
