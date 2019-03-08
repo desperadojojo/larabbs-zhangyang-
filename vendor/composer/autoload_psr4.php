@@ -61,6 +61,7 @@ return array(
     'Laravel\\Horizon\\' => array($vendorDir . '/laravel/horizon/src'),
     'JakubOnderka\\PhpConsoleHighlighter\\' => array($vendorDir . '/jakub-onderka/php-console-highlighter/src'),
     'JakubOnderka\\PhpConsoleColor\\' => array($vendorDir . '/jakub-onderka/php-console-color/src'),
+    'JPush\\' => array($vendorDir . '/jpush/jpush/src/JPush'),
     'Intervention\\Image\\' => array($vendorDir . '/intervention/image/src/Intervention/Image'),
     'Illuminate\\' => array($vendorDir . '/laravel/framework/src/Illuminate'),
     'HieuLe\\Active\\' => array($vendorDir . '/hieu-le/active/src'),
