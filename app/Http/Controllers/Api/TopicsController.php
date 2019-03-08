@@ -11,6 +11,7 @@ use App\Models\User;
 class TopicsController extends Controller
 {
     public function store(TopicRequest $request, Topic $topic, TopicTransformer $topictransformer){
+        
         $topic->fill($request->all());
         $topic->user_id = $this->user()->id;
         $topic->save();

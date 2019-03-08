@@ -70,7 +70,9 @@ class AuthorizationsRepository{
 
         $credentials['password'] = $request->password;
 
-        if (!$token = Auth::guard('api')->attempt($credentials)) {
+       
+
+        if (!$token = \Auth::guard('api')->attempt($credentials)) {
             return $this->response->errorUnauthorized('用户名或密码错误');
         }
 
