@@ -102,13 +102,13 @@ $api->version('v1', [
         // 登录
         // $api->post('authorizations', 'AuthorizationsController@authStore')
         //     ->name('api.auth.authorizations.store');
-        // 登录（Oauth2)
+        // 登录（Passport)
         $api->post('authorizations', 'AuthorizationsController@store')
             ->name('api.auth.authorizations.store');
         // 刷新token
         // $api->put('authorizations/current', 'AuthorizationsController@authupdate')
         //     ->name('api.authorizations.update');
-        // 刷新token（Oauth2)
+        // 刷新token（Passport)
         $api->put('authorizations/current', 'AuthorizationsController@update')
             ->name('api.authorizations.update');
         // 删除token

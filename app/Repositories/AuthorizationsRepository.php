@@ -5,9 +5,11 @@ namespace App\Repositories;
 use App\Models\User;
 use Dingo\Api\Routing\Helpers;
 use Auth;
+use App\Traits\PassportToken;
 
 class AuthorizationsRepository{
     use Helpers;
+    use PassportToken;
 
     public function weixinCreate($type,$request){
         if (!in_array($type, ['weixin'])) {
@@ -56,8 +58,13 @@ class AuthorizationsRepository{
                 break;
         }        
 
-        $token = Auth::guard('api')->fromUser($user);
-        return $this->respondWithToken($token)->setStatusCode(201);
+        // JWT
+        // $token = Auth::guard('api')->fromUser($user);
+        // return $this->respondWithToken($token)->setStatusCode(201);
+
+        // Passport
+        $result = $this->getBearerTokenByUser($user, '1', false);
+        return $this->response->array($result)->setStatusCode(201);
     }
 
     public function store($request)

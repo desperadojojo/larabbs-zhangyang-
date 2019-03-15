@@ -12,10 +12,12 @@ use Psr\Http\Message\ServerRequestInterface;
 use League\OAuth2\Server\Exception\OAuthServerException;
 use League\OAuth2\Server\AuthorizationServer;
 use Log;
+use App\Traits\PassportToken;
 
 class AuthorizationsController extends Controller
 {
-    
+    use PassportToken;
+
     protected $repo;
 
     public function __construct(AuthorizationsRepository $repo){
@@ -23,7 +25,7 @@ class AuthorizationsController extends Controller
         $this->repo = $repo;
     }
     
-    // Oauth
+    // Passport
     public function store(AuthorizationRequest $originRequest, AuthorizationServer $server, ServerRequestInterface $serverRequest)
     {
         try {
@@ -42,7 +44,15 @@ class AuthorizationsController extends Controller
         $token_array = $this->repo->store($request);
         return $token_array;        
     }
-      
+    
+    // JWT
+    // public function socialStore($type, SocialAuthorizationRequest $request)
+    // {
+    //     $token_array = $this->repo->weixinCreate($type,$request);
+    //     return $token_array;
+    // }
+
+    // Passport
     public function socialStore($type, SocialAuthorizationRequest $request)
     {
         $token_array = $this->repo->weixinCreate($type,$request);
@@ -57,7 +67,7 @@ class AuthorizationsController extends Controller
         return $this->repo->updateToken();
     }
     
-    // Oauth
+    // Passport
     public function update(AuthorizationServer $server, ServerRequestInterface $serverRequest) 
     {
         try {
